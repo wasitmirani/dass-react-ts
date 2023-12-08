@@ -1,13 +1,18 @@
-import React, { useEffect } from 'react';
+import React, { useEffect,useState  } from 'react';
 import Helper from "../../utils/helpers";
 
 const Home: React.FC = ()=>{
+  
+    const [is_loading, setIsLoading] = useState(true);
+
 
     useEffect(() => {
-        
+     
         setTimeout(() => {
-            // loadScripts(); // Call the loadScripts method here
+        
+           // Call the loadHomeScripts method here
             Helper.loadHomeScripts();
+            setIsLoading(false); // Update the state variable
         }, 1000);
         
       }, []); // Empty dependency array means this useEffect will run once when the component mounts
@@ -35,6 +40,9 @@ const Home: React.FC = ()=>{
 									</div>
 								</div>
 								<div className="col-lg-4 col-sm-6">
+                                    {/* {
+                                    !is_loading ? ( */}
+
 									<div className="card status-card border-0 rounded-3 mb-24 cursor-move">
 										<div className="card-body p-25 text-body">
 											<div className="d-flex align-items-center">
@@ -51,6 +59,7 @@ const Home: React.FC = ()=>{
 											</div>
 										</div>
 									</div>
+                                    {/* ) : "" } */}
 								</div>
 								<div className="col-lg-4 col-sm-6">
 									<div className="card status-card border-0 rounded-3 mb-24 cursor-move">
