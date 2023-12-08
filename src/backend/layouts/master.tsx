@@ -1,7 +1,12 @@
-
-import React from "react";
+import React, { useState } from 'react';
 
 const Master : React.FC=()=>{
+	const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+	const handleDropdownToggle = () => {
+		setIsDropdownOpen(!isDropdownOpen);
+	};
+
     return (
       <>
       
@@ -735,7 +740,22 @@ const Master : React.FC=()=>{
 									</li>
 
 									<li className="ms-lg-4 ms-md-4 ms-2">
-										<div className="dropdown notifications">
+									<div className={`dropdown notifications${isDropdownOpen ? ' show' : ''}`}>
+															<button
+																className="btn btn-secondary border-0 p-0 position-relative badge"
+																type="button"
+																onClick={handleDropdownToggle}
+															>
+																<i data-feather="bell"></i>
+															</button>
+															<div className={`dropdown-menu dropdown-lg p-0 border-0 box-shadow${isDropdownOpen ? ' show' : ''}`}>
+																{/* ... your dropdown content ... */}
+																<a href="notification.html" className="dropdown-item text-center text-white border-top border-color pt-2 pb-2 d-block bg-primary rounded-bottom fs-15">
+																View all
+																</a>
+															</div>
+															</div>
+										{/* <div className="dropdown notifications">
 											<button className="btn btn-secondary border-0 p-0 position-relative badge" type="button" data-bs-toggle="dropdown" aria-expanded="false">
 												<i data-feather="bell"></i>
 											</button>
@@ -871,7 +891,7 @@ const Master : React.FC=()=>{
 													View all
 												</a>
 											</div>
-										</div>
+										</div> */}
 									</li>
 
 									<li className="ms-lg-4 ms-md-4 ms-2">
