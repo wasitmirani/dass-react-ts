@@ -24,7 +24,7 @@
   <!--=== Favicon ===-->
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
   </head>
-  <body>
+  <body >
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <!-- <div className="preloader">
       <div className="content">
@@ -62,18 +62,19 @@
 
         <script src="assets/js/apex/apexcharts.js"></script>
 		<!--=== Amcharts ===-->
-    <script src="assets/js/amcharts/index.js"></script>
-        <script src="assets/js/amcharts/map.js"></script>
-        <script src="assets/js/amcharts/worldLow.js"></script>
-        <script src="assets/js/amcharts/Animated.js"></script>
+   
 		<script src="assets/js/apex/analytics-chart.js"></script>
 
 		<script src="assets/js/custom.js" ></script>
       <!--=== JS Link ===-->
-    <!-- <script >
+    <script >
       const scriptList = [
        
-        '/assets/js/custom.js',
+        '/assets/js/amcharts/index.js',
+        'assets/js/amcharts/map.js',
+        'assets/js/amcharts/worldLow.js',
+        'assets/js/amcharts/Animated.js',
+        'assets/js/apex/analytics-chart.js'
 
 
       ];
@@ -83,9 +84,9 @@
           const script = document.createElement('script');
           script.src = scriptUrl;
           document.head.appendChild(script);
-        }, index * 100); // Adjust the delay as needed
+        }, index * 400); // Adjust the delay as needed
       });
-    </script> -->
+    </script>
   
 
 
