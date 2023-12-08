@@ -750,6 +750,25 @@ const Master : React.FC=()=>{
 															</button>
 															<div className={`dropdown-menu dropdown-lg p-0 border-0 box-shadow${isDropdownOpen ? ' show' : ''}`}>
 																{/* ... your dropdown content ... */}
+																<h6 className="dropdown-item-text fs-15 fw-semibold m-0 py-3 border-bottom border-color d-flex justify-content-between align-items-center">
+													Notifications 
+													<span className="text-white bg-danger fs-12 py-1 px-1 rounded-1 fw-normal">08</span>
+												</h6> 
+												
+												<div className="notification-menu h-400" >
+													<a href="notifications.html" className="dropdown-item py-3">
+														<small className="float-end ps-2 text-body fs-12">6 min ago</small>
+														<div className="d-flex align-items-center">
+															<div className="avatar-md rounded-circle text-center flex-shrink-0">
+																<i data-feather="check-circle"></i>
+															</div>
+															<div className="flex-grow-1 ms-2 text-truncate">
+																<h6 className="my-0 fs-14 fw-medium">Order Placed <span className="text-success">ID: #1116773</span></h6>
+																<small className="mb-0 text-body fs-12">Order Placed Successfully</small>
+															</div>
+														</div>
+													</a>
+													</div>
 																<a href="notification.html" className="dropdown-item text-center text-white border-top border-color pt-2 pb-2 d-block bg-primary rounded-bottom fs-15">
 																View all
 																</a>
