@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import SideBarMenu from './components/sidebar';
 import HeaderMenu from './components/header';
 import { useRoutes } from "react-router-dom";
-import routes  from '../routes/router';
+import routes  from '../../routes/router';
 const Master : React.FC=()=>{
 	const app_routes = useRoutes(routes);
 	useEffect(() => {

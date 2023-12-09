@@ -40,8 +40,7 @@ const Home: React.FC = ()=>{
 									</div>
 								</div>
 								<div className="col-lg-4 col-sm-6">
-                                    {/* {
-                                    !is_loading ? ( */}
+                           
 
 									<div className="card status-card border-0 rounded-3 mb-24 cursor-move">
 										<div className="card-body p-25 text-body">
@@ -59,7 +58,7 @@ const Home: React.FC = ()=>{
 											</div>
 										</div>
 									</div>
-                                    {/* ) : "" } */}
+                                   
 								</div>
 								<div className="col-lg-4 col-sm-6">
 									<div className="card status-card border-0 rounded-3 mb-24 cursor-move">
